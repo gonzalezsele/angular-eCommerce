@@ -24,3 +24,39 @@
     margin-bottom: 35px;
     max-width: 12ch;
 }
+
+/* SERVICES */
+
+.service { padding-block: 45px; }
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.service-item {
+    max-width: 235px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    border-radius: 4px;
+    padding: 0.25em 0.5em; 
+    border: 2px solid var(--cultured);
+    background: var(--cultured);
+    box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+}
+
+.service-item-icon { width: 45px; }
+
+.service-item-icon img { margin-inline: auto; }
+
+.service-item-title {
+    color: var(--eerie-black);
+    font-size: var(--fs-7);
+    font-weight: var(--fw-600);
+}

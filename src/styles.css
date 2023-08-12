@@ -15,6 +15,13 @@
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
 
+    /* border */
+
+    --border: .1rem solid rgba(0,0,0.1);
+    --border-hover: .1rem solid var(--eerie-black);
+
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0.1);
+
     /* typography */
 
     --ff-jost: "Jost", sans-serif;
@@ -187,3 +194,6 @@ h3 > a { color: inherit; }
     text-align: center;
     margin-bottom: 30px;
 }
+
+
+

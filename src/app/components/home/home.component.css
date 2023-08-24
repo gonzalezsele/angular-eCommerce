@@ -61,6 +61,145 @@
     font-weight: var(--fw-600);
 }
 
+
+/* RELEASES */
+
+.releases {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.cards {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  background: var(--white);
+}
+
+.card .imgBx {
+  position: relative;
+  width: 100%;
+  height: 310px;
+  overflow: hidden;
+}
+
+.card .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover .imgBx img {
+  transform: scale(1.5);
+}
+
+.action {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.action li {
+  position: relative;
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  color: var(--eerie-black);
+  background: var(--white);
+  border: 1px solid var(--eerie-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  cursor: pointer;
+  transition: transform 0.5s;
+  transform: translateX(60px);
+}
+
+.action li:nth-child(2){
+  transition-delay: 0.15s;
+}
+
+.action li:nth-child(3){
+  transition-delay: 0.3s;
+}
+
+.releases .container .card:hover .action li{
+  transform: translateX(0px);
+}
+
+.action li:hover{
+  background: var(--eerie-black);
+  color: var(--white);
+}
+
+.action li span {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-20px);
+  white-space: nowrap;
+  padding: 4px 6px;
+  background: var(--white);
+  color: var(--eerie-black);
+  font-weight: 500;
+  font-size: 13px;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.action li:hover span {
+  transform: translateY(-50%) translateX(0px);
+  opacity: 1;
+}
+
+.action li span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--white);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.cards .card .content {
+  padding: 10px;
+}
+
+.cards .card .content .price_rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards .card .content .price_rating h2 {
+  font-size: 20px;
+  color: var(--candy-pink);
+  font-weight: 500;
+}
+
+.cards .card .content .price_rating p:not(:first-child) {
+  color: var(--sonic-silver);
+  margin-left: 5px;
+  text-decoration: line-through;
+}
+
 /* FEATURED */
 
 .featured-list {

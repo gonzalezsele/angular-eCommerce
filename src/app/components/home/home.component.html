@@ -15,202 +15,152 @@
         </div>
     </section>
 
+    <!-- RELEASES -->
     
-    <!-- SERVICES -->
-
-    <section class="service">
-    <div class="container">
-
-        <ul class="service-list">
-
-        <li class="service-item">
-            <div class="service-item-icon">
-            <img src="./assets/images/service-icon-1.svg" alt="Service icon">
-            </div>
-
-            <div class="service-content">
-            <p class="service-item-title">Free Shipping</p>
-
-            <p class="service-item-text">On All Order Over $599</p>
-            </div>
-        </li>
-
-        <li class="service-item">
-            <div class="service-item-icon">
-            <img src="./assets/images/service-icon-2.svg" alt="Service icon">
-            </div>
-
-            <div class="service-content">
-            <p class="service-item-title">Easy Returns</p>
-
-            <p class="service-item-text">30 Day Returns Policy <br><br></p>
-            </div>
-        </li>
-
-        <li class="service-item">
-            <div class="service-item-icon">
-            <img src="./assets/images/service-icon-3.svg" alt="Service icon">
-            </div>
-
-            <div class="service-content">
-            <p class="service-item-title">Secure Payment</p>
-
-            <p class="service-item-text">100% Secure Gaurantee</p>
-            </div>
-        </li>
-
-        <li class="service-item">
-            <div class="service-item-icon">
-            <img src="./assets/images/service-icon-4.svg" alt="Service icon">
-            </div>
-
-            <div class="service-content">
-            <p class="service-item-title">Special Support</p>
-
-            <p class="service-item-text">24/7 Dedicated Support</p>
-            </div>
-        </li>
-
-        </ul>
-
-    </div>
-    </section>
-
-    <!-- FEATURED -->
-
-    <section class="section featured">
+    <section class="section releases">
         <div class="container">
-            <h2 class="h2 section-title">Featured books</h2>
+            <h2 class="h2 section-title">
+                Featured books | Upcoming Releases
+            </h2>
 
-            <ul class="featured-list">
+            <div class="cards">
 
-                <li>
-                    <div class="featured-card">
-
-                        <figure class="card-banner">
-                            <a href="#">
-                                <img src="./assets/images/cover-001.jpg" alt="" loading="lazy" width="300" height="300" class="w-100">
-                            </a>
-
-                            <div class="card-actions">
-                                <button class="card-action-btn" aria-label="Quick view">
-                                    <i class='bx bx-file'></i>
-                                  </button>
-              
-                                  <button class="card-action-btn cart-btn">
-                                    <i class='bx bx-cart-add' aria-hidden="true"></i>
-              
-                                    <p>Add to Cart</p>
-                                  </button>
-              
-                                  <button class="card-action-btn" aria-label="Add to Whishlist">
-                                    <i class='bx bx-heart' ></i>
-                                  </button>
-                            </div>
-                        </figure>
-
-                        <div class="card-content">
-                            <h4 class="h4 card-title">
-                              <a href="#">The Poppy War</a>
-                            </h4>
-                            <p>R.F. Kuang</p>
-          
-                            <div class="card-price">
-                              <data value="21.85">&pound;21.85</data>
-
-                              <data value="23.00">&pound;23.00</data>
-                            </div>
-                        </div>
-          
+                <div class="card" *ngFor="let release of releases">
+                    <div class="imgBx">
+                        <img [src]="release.image" alt="{{release.title}}">
+                        <ul class="action">
+                            <li>
+                                <i class='bx bx-file'></i>
+                                <span>View details</span>
+                            </li>
+                            <li>
+                                <i class='bx bx-cart-add' aria-hidden="true"></i>
+                                <span>Add to cart</span>
+                            </li>
+                            <li>
+                                <i class='bx bx-heart'></i>
+                                <span>Add to wishlist</span>
+                            </li>
+                        </ul>
                     </div>
-                </li>
-
-                <li>
-                    <div class="featured-card">
-
-                        <figure class="card-banner">
-                            <a href="#">
-                                <img src="./assets/images/cover-001.jpg" alt="" loading="lazy" width="300" height="300" class="w-100">
-                            </a>
-
-                            <div class="card-actions">
-                                <button class="card-action-btn" aria-label="Quick view">
-                                    <i class='bx bx-file'></i>
-                                  </button>
-              
-                                  <button class="card-action-btn cart-btn">
-                                    <i class='bx bx-cart-add' aria-hidden="true"></i>
-              
-                                    <p>Add to Cart</p>
-                                  </button>
-              
-                                  <button class="card-action-btn" aria-label="Add to Whishlist">
-                                    <i class='bx bx-heart' ></i>
-                                  </button>
-                            </div>
-                        </figure>
-
-                        <div class="card-content">
+                    <div class="content">
+                        <div class="productName">
                             <h4 class="h4 card-title">
-                              <a href="#">The Poppy War</a>
+                                {{release.title}}
                             </h4>
-                            <p>R.F. Kuang</p>
-          
-                            <div class="card-price">
-                              <data value="21.85">&pound;21.85</data>
-
-                              <data value="23.00">&pound;23.00</data>
-                            </div>
+                            <p>
+                                {{release.author}}
+                            </p>
                         </div>
-          
+                        <div class="price_rating">
+                            <h2>
+                                &pound;{{release.price}}
+                            </h2>
+                            <p>
+                                &pound;{{release.reduced_price}}
+                            </p>                    
+                        </div>
                     </div>
-                </li>
-
-                <li>
-                    <div class="featured-card">
-
-                        <figure class="card-banner">
-                            <a href="#">
-                                <img src="./assets/images/cover-001.jpg" alt="" loading="lazy" width="300" height="300" class="w-100">
-                            </a>
-
-                            <div class="card-actions">
-                                <button class="card-action-btn" aria-label="Quick view">
-                                    <i class='bx bx-file'></i>
-                                  </button>
-              
-                                  <button class="card-action-btn cart-btn">
-                                    <i class='bx bx-cart-add' aria-hidden="true"></i>
-              
-                                    <p>Add to Cart</p>
-                                  </button>
-              
-                                  <button class="card-action-btn" aria-label="Add to Whishlist">
-                                    <i class='bx bx-heart' ></i>
-                                  </button>
-                            </div>
-                        </figure>
-
-                        <div class="card-content">
+                </div>
+    
+                <!-- <div class="card">
+                    <div class="imgBx">
+                        <img src="./assets/images/releases/cover-002.png" alt="The Chalice of the Gods">
+                        <ul class="action">
+                            <li>
+                                <i class='bx bx-file'></i>
+                                <span>View details</span>
+                            </li>
+                            <li>
+                                <i class='bx bx-cart-add' aria-hidden="true"></i>
+                                <span>Add to cart</span>
+                            </li>
+                            <li>
+                                <i class='bx bx-heart'></i>
+                                <span>Add to wishlist</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="productName">
                             <h4 class="h4 card-title">
-                              <a href="#">The Poppy War</a>
+                                The Chalice of the Gods
                             </h4>
-                            <p>R.F. Kuang</p>
-          
-                            <div class="card-price">
-                              <data value="21.85">&pound;21.85</data>
-
-                              <data value="23.00">&pound;23.00</data>
-                            </div>
+                            <p>Rick Riordan</p>
                         </div>
-          
+                        <div class="price_rating">
+                            <h2>&pound;11.99</h2>
+                            <p>&pound;16.99</p>                    
+                        </div>
                     </div>
-                </li>
+                </div>
 
-            </ul>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="./assets/images/releases/cover-003.png" alt="Vows & Ruins">
+                        <ul class="action">
+                            <li>
+                                <i class='bx bx-file'></i>
+                                <span>View details</span>
+                            </li>
+                            <li>
+                                <i class='bx bx-cart-add' aria-hidden="true"></i>
+                                <span>Add to cart</span>
+                            </li>
+                            <li>
+                                <i class='bx bx-heart'></i>
+                                <span>Add to wishlist</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="productName">
+                            <h4 class="h4 card-title">
+                                Vows & Ruins
+                            </h4>
+                            <p>Helen Scheuerer</p>
+                        </div>
+                        <div class="price_rating">
+                            <h2>&pound;13.99</h2>
+                            <p>&pound;18.99</p>                    
+                        </div>
+                    </div>
+                </div>
 
-            <button class="btn btn-outline">View All Products</button>
-            
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="./assets/images/releases/cover-004.png" alt="Fall of Ruin and Wrath">
+                        <ul class="action">
+                            <li>
+                                <i class='bx bx-file'></i>
+                                <span>View details</span>
+                            </li>
+                            <li>
+                                <i class='bx bx-cart-add' aria-hidden="true"></i>
+                                <span>Add to cart</span>
+                            </li>
+                            <li>
+                                <i class='bx bx-heart'></i>
+                                <span>Add to wishlist</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="productName">
+                            <h4 class="h4 card-title">
+                                Fall of Ruin and Wrath
+                            </h4>
+                            <p>Jennifer L. Armentrout</p>
+                        </div>
+                        <div class="price_rating">
+                            <h2>&pound;17.99</h2>
+                            <p>&pound;20.00</p>                    
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+
         </div>
 
     </section>

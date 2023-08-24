@@ -102,7 +102,6 @@ html {
 
 body {
     background: var(--white);
-    padding-block: 70px;
     height: 300vh;
 }
 

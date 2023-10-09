@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
   releases: any []
+  boxset: any[]
 
   constructor () {
   this.releases = [
@@ -64,9 +65,71 @@ export class HomeComponent {
   "image": "./assets/images/releases/cover-001.png",
   "price": "17.47",
   "reduced_price": "18.99"
-  }
+  },
+  { 
+  "id": "7", 
+  "title": "Cage of Dreams", 
+  "author": "Rebecca Schaeffer", 
+  "publishedDate": "September 26, 2023", 
+  "image": "./assets/images/releases/cover-007.png",
+  "price": "17.47",
+  "reduced_price": "18.99"
+  },
+  { 
+  "id": "8", 
+  "title": "Sun of Blood and Ruin", 
+  "author": "Mariely Lares", 
+  "publishedDate": "September 28, 2023", 
+  "image": "./assets/images/releases/cover-008.png",
+  "price": "17.47",
+  "reduced_price": "18.99"
+  },
 
   ]
+
+  this.boxset = [
+    { 
+      "id": "1", 
+      "title": "Six of Crows Box Set", 
+      "author": "Leigh Bardugo", 
+      "publishedDate": "Jannuary 1, 2016", 
+      "description": "The Six of Crows Series By Leigh Bardugo Collection 2 Books Set.",
+      "image": "./assets/images/boxset/cover-001.png",
+      "price": "16.99",
+      "reduced_price": "14.95"
+      },
+      { 
+      "id": "2", 
+      "title": "Shadow and Bone Box Set", 
+      "author": "Leigh Bardugo", 
+      "publishedDate": "November 1, 2018", 
+      "description": "The Grishaverse Series By Leigh Bardugo Collection 3 Books Set.",
+      "image": "./assets/images/boxset/cover-002.png",
+      "price": "23.97",
+      "reduced_price": "15.00"
+      },
+      { 
+      "id": "3", 
+      "title": "King of Scars Box Set", 
+      "author": "Leigh Bardugo", 
+      "publishedDate": "Jannuary 1, 2021", 
+      "description": "King of Scars By Leigh Bardugo Collection 2 Books Set.",
+      "image": "./assets/images/boxset/cover-003.png",
+      "price": "20.99",
+      "reduced_price": "17.99"
+      },
+      { 
+      "id": "4", 
+      "title": "The Folk of the Air Box Set", 
+      "author": "Holly Black", 
+      "publishedDate": "Jannuary 1, 2020", 
+      "description": "The Folk of the Air Series By Holly Black Collection 3 Books Set.",
+      "image": "./assets/images/boxset/cover-004.png",
+      "price": "30.10",
+      "reduced_price": "23.99"
+      },
+
+    ]
   }
 
 }

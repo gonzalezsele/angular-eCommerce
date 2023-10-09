@@ -1,7 +1,7 @@
 <main>
     <article>
 
-    <!-- HERO -->
+    <!-- HERO 1 -->
 
     <section class="hero" id="home" style="background-image: url(./assets/images/hero-banner.png);">
         <div class="container">
@@ -24,7 +24,6 @@
             </h2>
 
             <div class="cards">
-
                 <div class="card" *ngFor="let release of releases">
                     <div class="imgBx">
                         <img [src]="release.image" alt="{{release.title}}">
@@ -62,10 +61,38 @@
                         </div>
                     </div>
                 </div>
-    
-                <!-- <div class="card">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- HERO 2 -->
+
+    <section class="hero" id="home" style="background-image: url(./assets/images/hero-banner-002.png);">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-subtitle">UK Exclusive Edition</p>
+                <h2 class="h1 hero-title">
+                    Jannuary 30, 24
+                </h2>
+                <button class="btn btn-primary">pre-order now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOXSET -->
+
+    <section class="section boxset">
+        <div class="container">
+            <h2 class="h2 section-title">
+                Books Collection Set | Complete Series
+            </h2>
+
+            <div class="cards">
+                <div class="card" *ngFor="let boxset of boxset">
                     <div class="imgBx">
-                        <img src="./assets/images/releases/cover-002.png" alt="The Chalice of the Gods">
+                        <img [src]="boxset.image" alt="{{boxset.title}}">
                         <ul class="action">
                             <li>
                                 <i class='bx bx-file'></i>
@@ -84,81 +111,22 @@
                     <div class="content">
                         <div class="productName">
                             <h4 class="h4 card-title">
-                                The Chalice of the Gods
+                                {{boxset.title}}
                             </h4>
-                            <p>Rick Riordan</p>
+                            <p>
+                                {{boxset.author}}
+                            </p>
                         </div>
                         <div class="price_rating">
-                            <h2>&pound;11.99</h2>
-                            <p>&pound;16.99</p>                    
+                            <h2>
+                                &pound;{{boxset.price}}
+                            </h2>
+                            <p>
+                                &pound;{{boxset.reduced_price}}
+                            </p>                    
                         </div>
                     </div>
                 </div>
-
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="./assets/images/releases/cover-003.png" alt="Vows & Ruins">
-                        <ul class="action">
-                            <li>
-                                <i class='bx bx-file'></i>
-                                <span>View details</span>
-                            </li>
-                            <li>
-                                <i class='bx bx-cart-add' aria-hidden="true"></i>
-                                <span>Add to cart</span>
-                            </li>
-                            <li>
-                                <i class='bx bx-heart'></i>
-                                <span>Add to wishlist</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <div class="productName">
-                            <h4 class="h4 card-title">
-                                Vows & Ruins
-                            </h4>
-                            <p>Helen Scheuerer</p>
-                        </div>
-                        <div class="price_rating">
-                            <h2>&pound;13.99</h2>
-                            <p>&pound;18.99</p>                    
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="./assets/images/releases/cover-004.png" alt="Fall of Ruin and Wrath">
-                        <ul class="action">
-                            <li>
-                                <i class='bx bx-file'></i>
-                                <span>View details</span>
-                            </li>
-                            <li>
-                                <i class='bx bx-cart-add' aria-hidden="true"></i>
-                                <span>Add to cart</span>
-                            </li>
-                            <li>
-                                <i class='bx bx-heart'></i>
-                                <span>Add to wishlist</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <div class="productName">
-                            <h4 class="h4 card-title">
-                                Fall of Ruin and Wrath
-                            </h4>
-                            <p>Jennifer L. Armentrout</p>
-                        </div>
-                        <div class="price_rating">
-                            <h2>&pound;17.99</h2>
-                            <p>&pound;20.00</p>                    
-                        </div>
-                    </div>
-                </div> -->
-
             </div>
 
         </div>
